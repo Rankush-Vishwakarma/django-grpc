@@ -1,0 +1,38 @@
+Day 3: Traffic Purchase and Reward Sharing
+Goal: Learn the Traffic purchase and reward sharing processes.
+Exercise:
+  Write a Python script to simulate the Traffic purchase process:
+  Fetch the current Traffic balance.
+  Calculate the delta between the threshold and the current balance.
+  Log the purchase in a dummy database table.
+
+
+Practice Task:
+Modify the script to include reward sharing:
+Calculate rewards based on the current round.
+Log the rewards in a dummy tenant_rewards table.
+
+
+Traffic Purchase:
+  Users can purchase bandwidth (Traffic) in bytes for their validator nodes.
+  Traffic is priced in USD but paid in Canton Coins (CC).
+  The system ensures that users maintain a Traffic threshold to avoid disruptions.
+Rewards:
+  Users earn rewards in Canton Coins (CC) every 10 minutes for their participation.
+  Rewards are calculated based on the user's activity, Traffic usage, and license status.
+  Rewards are shared back to tenants after deducting fees and maintaining reserves.
+
+Traffic Purchase:
+  The system monitors the user's current Traffic balance.
+  If the balance falls below the threshold, Traffic is purchased automatically.
+  The purchase amount is logged in the tenant_Traffic_purchase_history table.
+Reward Sharing:
+  Rewards are calculated every 10 minutes.
+  A portion of the rewards is shared with tenants based on their activity.
+  Rewards are logged in the tenant_rewards table.
+
+
+db - Users, tenant_Traffic_purchase_history,tenant_rewards
+users/tenants -> name, validator node associated with the party Id, current balance 
+tenant_Traffic_purchase_history -> user name, purchased amount
+tenant_rewards -> user name, rewards 
