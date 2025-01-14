@@ -1,0 +1,14 @@
+python3 -m venv env
+env\Scripts\activate - for windows 
+pip install -r requirements.txt 
+django-admin startproject grpcproject -> django-admin startproject <Project Name>
+cd grpcproject 
+django-admin startapp myFirstApp -> django-admin startapp <App Name> or py -m django startapp <App Name>  
+python manage.py migrate
+python -m grpc_tools.protoc --proto_path=./ --python_out=./ --grpc_python_out=./ ./myApp.proto 
+python manage.py runserver
+
+to run the server - 
+cd grpcproject
+python myFirstApp/server.py
+

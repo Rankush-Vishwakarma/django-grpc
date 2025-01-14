@@ -1,7 +1,7 @@
 from django.contrib import admin
-from .models import User, Reward, TenantTrafficPurchaseHistory, TenantTrafficReward
+from .models import UserProfile, Reward, TenantTrafficPurchaseHistory, TenantTrafficReward
 
-@admin.register(User)
+@admin.register(UserProfile)
 class UserAdmin(admin.ModelAdmin):
     list_display = ['name', 'email', 'validator_Node', 'party_Id', 'threshold', 'current_Balance']
     search_fields = ['name', 'email', 'validator_Node', 'party_Id']

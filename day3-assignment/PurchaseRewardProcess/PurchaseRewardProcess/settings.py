@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    # core for the db models    
+    'core',
     # Reward sharing process app
     'RewardSharing',
     # Traffic Purchase app
